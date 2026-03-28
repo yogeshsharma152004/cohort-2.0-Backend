@@ -237,3 +237,59 @@ Different roles:
 - Add .env file to prevent uploading to GitHub
 
 ---
+
+# Day -94 - Update, Delete & Integration
+
+## Database Operations
+
+### Delete
+- Use findByIdAndDelete
+- Deletes specific data from database
+
+### Update
+- Use findByIdAndUpdate
+- Updates specific data
+
+## Backend–Frontend Integration
+- Connect React frontend with backend APIs
+
+## Axios
+- Used to call backend APIs
+- Example: axios.get()
+
+## CORS Error
+- Happens when frontend and backend are on different servers
+- Browser blocks the request
+
+## Solution
+- Use CORS package in backend
+
+---
+
+# Day -95 - Full API Integration & Deployment
+
+## API Integration
+- Integrated POST, UPDATE, DELETE APIs in React
+- Fetch and manage data from backend
+
+## useEffect
+- Prevents unnecessary re-renders
+- Controls when API calls run
+
+## React Build
+- Run: npm run build
+- Converts React app into:
+  - HTML
+  - CSS
+  - JavaScript
+
+## Deployment Setup
+- Move build files to backend (public folder)
+
+## Express Setup
+- express.static → Serve static files
+- Wildcard route (*) → Handle all routes
+- res.sendFile → Send frontend file
+
+## Result
+- Frontend and backend run on same server
