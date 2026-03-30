@@ -9,9 +9,11 @@ const App = () => {
 
 
   function fetchNotes(){
-    axios.get("http://localhost:3000/api/notes").then((res) => {
-      setNotes(res.data.note);
-    });
+    axios
+      .get("https://cohort-2-0-backend-4jpf.onrender.com/api/notes")
+      .then((res) => {
+        setNotes(res.data.note);
+      });
   }
 
   useEffect(() => {
@@ -25,24 +27,27 @@ const App = () => {
      console.log(title.value, description.value);
      
 
-     axios.post("http://localhost:3000/api/notes" ,{
-         title:title.value,
-         description:description.value
-        
-     })
-     .then((res) => {
-      fetchNotes()
-     })
+     axios
+       .post("https://cohort-2-0-backend-4jpf.onrender.com/api/notes", {
+         title: title.value,
+         description: description.value,
+       })
+       .then((res) => {
+         fetchNotes();
+       });
   }
 
   function deleteNoteHandler(noteId){
  
  
 
-    axios.delete("http://localhost:3000/api/notes/" + noteId)
-    .then(() => {
-      fetchNotes()
-    })
+    axios
+      .delete(
+        "https://cohort-2-0-backend-4jpf.onrender.com/api/notes/" + noteId,
+      )
+      .then(() => {
+        fetchNotes();
+      });
 
   }
 
@@ -50,12 +55,16 @@ const App = () => {
     const updateTitle  = prompt("Update Title")
 
     if(updateTitle){
-      axios.patch("http://localhost:3000/api/notes/" + noteId , {
-        title:updateTitle
-      })
-      .then(() => {
-        fetchNotes()
-      })
+      axios
+        .patch(
+          "https://cohort-2-0-backend-4jpf.onrender.com/api/notes/" + noteId,
+          {
+            title: updateTitle,
+          },
+        )
+        .then(() => {
+          fetchNotes();
+        });
     }
   }
   
