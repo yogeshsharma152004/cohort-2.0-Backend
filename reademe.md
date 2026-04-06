@@ -293,3 +293,117 @@ Different roles:
 
 ## Result
 - Frontend and backend run on same server
+
+---
+
+# Day -96 - Deployment (Frontend + Backend)
+
+## Deployment Platforms
+- Frontend: Vercel
+- Backend: Render
+
+## Problem
+- Separate deployment requires managing different resources
+
+## Solution
+- Deploy frontend and backend together
+
+## React Build
+- Run: npm run build
+- Creates dist folder:
+  - HTML
+  - CSS
+  - JavaScript
+
+## Setup
+- Move dist files to backend (public folder)
+
+## Express Middleware
+- express.static() → Serve frontend files
+
+## Deployment
+- Deploy complete project on Render
+
+## Issue Faced
+- API calls still pointing to localhost
+
+## Solution
+- Replace localhost API with deployed backend URL
+- Run npm run build again
+- Replace old dist folder
+
+## Result
+- Full-stack app runs correctly on deployed server
+
+---
+
+# Day -97 - Authentication System
+
+## 4 Pillars of Authentication
+
+### 1. Authentication
+- Identify which user is making request
+
+### 2. Authorization
+- Different users have different permissions
+
+### 3. Validation
+- Check data format (email, password, etc.)
+
+### 4. Verification
+- Check if data is correct and valid
+
+## How Authentication Works
+
+1. User registers (name, email, password)
+2. Server stores data in database
+3. Server creates a token
+
+## Token
+- Works like an ID card
+- Sent with every request
+- Helps server identify user
+
+## JWT (JSON Web Token)
+- Token is signed using secret key (JWT_SECRET)
+- Secret key is stored only on server
+
+## Security
+- Server verifies token using secret
+- Prevents fake users and requests
+
+---
+
+# Day -98 - Routing, JWT & Cookies
+
+## Express Router
+- Used to create modular routes
+- Keeps code clean and organized
+
+## Route Structure
+- Create routes in separate folder
+- Import and use in main file (app.js)
+- Use prefix for routes
+
+## Duplicate User Handling
+- Check if email already exists
+- Prevent multiple accounts with same email
+
+## JSON Web Token (JWT)
+- Install: npm i jsonwebtoken
+- Generate token using user ID
+- Sign token using JWT_SECRET
+
+## Cookies
+- Stored on client side (browser)
+- Server can read and write cookies
+
+## cookie-parser
+- Install: npm i cookie-parser
+- Helps access cookies in backend
+
+## Notes
+- Cookies can be seen in Postman
+- Used to store token securely
+
+---
