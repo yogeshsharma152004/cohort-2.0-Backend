@@ -407,3 +407,40 @@ Different roles:
 - Used to store token securely
 
 ---
+
+# Day -99 - Login API & Password Security
+
+## Login API Flow
+- User sends email and password
+- Server checks:
+  - User exists or not
+  - Password is correct or not
+
+## If Valid
+- Generate token
+- Send token in cookies
+
+## Token Best Practice
+- Store only user ID
+- Do not store sensitive data
+
+## Cookies
+- Access using req.cookies
+
+## Data Breach Problem
+- If database leaks, accounts can be hacked
+
+## Solution: Hashing
+
+- Convert password → hash
+- Same input → same hash
+- Cannot reverse hash to original password
+
+## Crypto Module
+- Used for hashing passwords
+- Store hashed password in database
+
+## Result
+- Improved security for user data
+
+---
