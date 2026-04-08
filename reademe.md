@@ -444,3 +444,31 @@ Different roles:
 - Improved security for user data
 
 ---
+
+# Day 100 & 101 - Motivation & Career Guidance
+
+## Day 100 - Motivation
+- Session by Ankur Bhaiya
+- Focus on consistency and hard work
+
+### Key Learnings
+- Stay consistent daily
+- Work hard for goals
+- No shortcuts to success
+
+## Day 101 - Career Guidance
+- Session by Dhanesh Bhaiya
+- Focus on job preparation
+
+### Key Learnings
+- Where and how to apply for jobs
+- Use LinkedIn, referrals, and college networks
+- Build strong resume and profile
+- Importance of projects and skills
+- Understand hiring mindset
+
+## Result
+- Clear direction for career
+- Motivation to stay consistent
+
+---
