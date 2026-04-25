@@ -6,10 +6,25 @@ const multer = require("multer")
 const upload = multer({storage:multer.memoryStorage()})
 
 /**
- * /api/posts [protected route]
+ * POST METHOD /api/posts [protected route]
  * {caption , img-file} = req.body
  */
 
 postRouter.post("/" ,upload.single("image"), postController.createPostController )
+
+/**
+ * GET METHOD /api/posts [protected route]
+ * fetch all the post of the user who requested
+ */
+
+postRouter.get("/" , postController.getPostController)
+
+/**
+ * GET METHOD /api/posts/details/:id [protected route]
+ * retuen an detail about the sepcific post with id and also chcek the post belongs to the user that the request come from 
+ */
+
+postRouter.get("/details/:postId" , postController.getPostDetailsController)
+
 
 module.exports = postRouter
