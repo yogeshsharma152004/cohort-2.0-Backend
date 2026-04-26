@@ -472,3 +472,148 @@ Different roles:
 - Motivation to stay consistent
 
 ---
+
+# Day -102 - Backend Project Setup
+
+## Project Start
+- Began a real-world backend mini project
+
+## Folder Structure
+- Learned better project organization
+- Created controllers folder
+
+## Backend Setup
+- Structured project in a professional way
+
+## Authentication
+- Implemented authentication flow
+- Completed login logic step by step
+
+## Learning
+- More practical and deep backend understanding
+
+## Result
+- Clear idea of real-world backend structure
+
+---
+
+# Day -103 - Post Creation & File Upload
+
+## Database
+- Use multiple collections (users, posts, etc.)
+- Better data management
+
+## Password Security
+- Use bcryptjs for hashing
+- More secure than crypto
+
+### Methods
+- Hash password
+- Compare password using bcrypt.compare
+
+## Data Referencing
+- Pass user ID from user collection to post collection
+
+## Multer (File Upload)
+- Middleware to handle files
+
+### Storage Types
+1. Disk Storage
+   - Store files in system (SSD/Hard disk)
+
+2. Memory Storage
+   - Store files temporarily in RAM
+
+## Why Not Store Files on Server?
+- Uses more bandwidth
+- Higher cost
+
+## Cloud Storage
+- Use ImageKit for storing files
+- Server stores file temporarily
+- Upload to cloud, then remove from server
+
+## Result
+- Secure password handling
+- Efficient file storage using cloud
+
+---
+
+# Day -104 - Post Creation & Token Verification
+
+## Image Upload
+- ImageKit returns:
+  - fileId
+  - size
+  - URL
+  - thumbnail
+
+- Save image URL in database while creating post
+
+## User Identification
+- User sends token with request
+- Token contains user data
+
+## Token Verification
+- Verify token using JWT
+- Check if token is valid or fake
+
+## Post Creation Flow
+1. Check token in cookies
+2. Verify token
+3. Get user ID from token
+4. Create post with user ID + image URL
+
+## Unauthorized Access
+- No token → user not registered or token expired
+- Invalid token → reject request
+
+## Error Handling
+- Use try-catch
+
+## ImageKit
+- Create folders for better file organization
+
+## Result
+- Secure post creation with user authentication
+
+---
+
+# Day -105 - User Features & Authorization
+
+## Get User Posts
+- Identify user using token
+- Get user ID
+- Fetch all posts of that user
+
+## Get Single Post
+- Use postId from params
+- Find post in database
+
+## Authorization
+- Verify token
+- Check if post belongs to same user
+
+## Unauthorized Case
+- If user is not owner → return unauthorized
+
+## Issue Faced
+- postId and userId are ObjectId
+
+## Solution
+- Convert ObjectId to string using toString()
+- Then compare values
+
+## Result
+- Only authorized users can access their posts
+
+---
+
+
+
+---
+
+
+
+
+---
